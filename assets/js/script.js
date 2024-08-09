@@ -107,7 +107,7 @@ for (product of listProducts) {
         <p>${product.descricao}</p>
         <div class="preco-carrinho">
             <h3>$${product.preco}</h3>
-            <i class="fa-solid fa-cart-plus"></i>
+            <i onclick="clickCarrinho()" class="fa-solid fa-cart-plus"></i>
         </div>
         <div class="comprar">
             Comprar
@@ -115,4 +115,10 @@ for (product of listProducts) {
     </div>`;
 
     document.getElementById('boxes').innerHTML += box;
+}
+
+const carrinho = document.querySelector('.carrinho-teste');
+
+function clickCarrinho() {
+    alert('Produto Adicionado ao Carrinho!!')
 }
